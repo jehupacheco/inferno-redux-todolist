@@ -1,0 +1,21 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_todos = require('./todos'); /* istanbul ignore next */var _todos2 = _interopRequireDefault(_todos);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('todosReducer()', () => {
+  it('Adds todo', () => {
+    const stateBefore = [];
+    const action = {
+      type: 'ADD_TODO',
+      id: 1,
+      description: 'Test Todo' };
+
+    const stateAfter = [
+    {
+      id: 1,
+      description: 'Test Todo',
+      completed: false }];
+
+
+
+    expect( /* istanbul ignore next */(0, _todos2.default)(stateBefore, action)).toEqual(stateAfter);
+  });
+});

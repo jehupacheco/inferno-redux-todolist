@@ -1,0 +1,40 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_todo = require('./todo'); /* istanbul ignore next */var _todo2 = _interopRequireDefault(_todo);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('todoReducer()', () => {
+  const actionToogleTodo = {
+    type: 'TOGGLE_TODO',
+    id: 1 };
+
+
+  it('Should toogle todo when id matches', () => {
+    const mockTodo = {
+      id: 1,
+      description: "Mock Todo",
+      completed: false };
+
+
+    const expectedTodo = {
+      id: 1,
+      description: "Mock Todo",
+      completed: true };
+
+
+    expect( /* istanbul ignore next */(0, _todo2.default)(mockTodo, actionToogleTodo)).toEqual(expectedTodo);
+  });
+
+  it('Shouldn\'t toogle todo when id doesn\'t match', () => {
+    const mockTodo = {
+      id: 2,
+      description: "Mock Todo",
+      completed: false };
+
+
+    const expectedTodo = {
+      id: 2,
+      description: "Mock Todo",
+      completed: false };
+
+
+    expect( /* istanbul ignore next */(0, _todo2.default)(mockTodo, actionToogleTodo)).toEqual(expectedTodo);
+  });
+});

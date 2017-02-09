@@ -1,0 +1,22 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var /* istanbul ignore next */_inferno = require('inferno'); /* istanbul ignore next */var _inferno2 = _interopRequireDefault(_inferno);
+var /* istanbul ignore next */_infernoComponent = require('inferno-component'); /* istanbul ignore next */var _infernoComponent2 = _interopRequireDefault(_infernoComponent);
+var /* istanbul ignore next */_logo = require('./logo'); /* istanbul ignore next */var _logo2 = _interopRequireDefault(_logo);
+/* istanbul ignore next */require('./App.css'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var createVNode = _inferno2.default.createVNode;
+
+class App extends /* istanbul ignore next */_infernoComponent2.default {
+  render() {
+    return (/* istanbul ignore next */createVNode(2, 'div', { 'className':
+        'App' }, [createVNode(2, 'div', { 'className':
+        'App-header' }, [createVNode(16, _logo2.default, { 'width':
+        '80', 'height': '80' }), createVNode(2, 'h2', null, 'Welcome to Inferno')]), createVNode(2, 'p', { 'className':
+
+
+        'App-intro' }, ['To get started, edit ', createVNode(2, 'code', null, 'src/App.js'), ' and save to reload.'])]));
+
+
+
+
+  }} /* istanbul ignore next */exports.default =
+
+
+App;

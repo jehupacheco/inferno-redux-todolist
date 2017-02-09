@@ -1,0 +1,15 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.default = function () {/* istanbul ignore next */let todo = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {}; /* istanbul ignore next */let action = arguments[1];
+  switch (action.type) {
+    case 'TOGGLE_TODO':
+      if (todo.id !== action.id) {
+        return todo;
+      } else {
+        return (/* istanbul ignore next */Object.assign({},
+          todo, {
+            completed: !todo.completed }));
+
+      }
+    default:
+      return todo;}
+
+};
