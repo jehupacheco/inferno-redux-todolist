@@ -20,3 +20,7 @@
 code {
   color: #e73a37;
 }
+
+.is-completed {
+  text-decoration: line-through;
+}
