@@ -1,5 +1,5 @@
 import Inferno from 'inferno';
-import Todo from 'presentational/Todo';
+import Todo from 'container/Todo';
 
 const TodoList = ({todos}) => {
   return (
