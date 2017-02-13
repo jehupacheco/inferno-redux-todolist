@@ -1,10 +1,6 @@
 import { connect } from 'inferno-redux';
 import Todo from 'presentational/Todo';
 
-// const mapStateToProps = (state, ownProps) => {
-//   return ownProps;
-// }
-
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onClick: (id) => {
@@ -14,7 +10,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       });
     },
     ...ownProps,
-  }
+  };
 }
 
 export default connect(null, mapDispatchToProps)(Todo);

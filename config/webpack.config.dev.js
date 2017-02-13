@@ -69,9 +69,9 @@ module.exports = {
     // https://github.com/facebookincubator/create-react-app/issues/253
     fallback: paths.nodePaths,
     alias: {
-      components: '/app/src/components/',
-      presentational: '/app/src/components/presentational',
-      container: '/app/src/components/container',
+      components: paths.appSrc + '/components/',
+      presentational: paths.appSrc + '/components/presentational',
+      container: paths.appSrc + '/components/container',
     },
     // These are the reasonable defaults supported by the Node ecosystem.
     // We also include JSX as a common component filename extension to support
@@ -110,6 +110,7 @@ module.exports = {
           /\.html$/,
           /\.(js|jsx)$/,
           /\.css$/,
+          /\.scss$/,
           /\.json$/,
           /\.svg$/
         ],
@@ -140,6 +141,10 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style!css?importLoaders=1!postcss'
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass'],
       },
       // JSON is not enabled by default in Webpack but both Node and Browserify
       // allow it implicitly so we also enable it.

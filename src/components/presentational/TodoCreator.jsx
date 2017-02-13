@@ -2,13 +2,23 @@ import Inferno from 'inferno';
 
 const TodoCreator = ({onSubmit}) => {
   let counter = 0;
-  let inputNode;
+
+  const submitHandler = (e) => {
+    const inputNode = e.target;
+    if (e.key === 'Enter' && inputNode.value !== '') {
+      onSubmit(counter++, inputNode.value);
+      inputNode.value = '';
+    }
+  }
+
   return (
-    <div>
-      <input type="text" ref={ (input) => inputNode = input}/>
-      <button onClick={() => onSubmit(inputNode.value)}>
-        Add Todo
-      </button>
+    <div className="todocreator">
+      <input
+        type="text"
+        onKeyUp={submitHandler}
+        className="todocreator-input"
+        placeholder="What needs to be done?"
+      />
     </div>
   );
 }

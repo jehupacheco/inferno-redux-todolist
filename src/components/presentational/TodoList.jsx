@@ -3,10 +3,10 @@ import Todo from 'container/Todo';
 
 const TodoList = ({todos}) => {
   return (
-    <ul>
+    <ul className="todolist">
       {todos.map((todo, index) => {
         return (
-          <li>
+          <li className="todo">
             <Todo {...todo} key={index}/>
           </li>
         );
